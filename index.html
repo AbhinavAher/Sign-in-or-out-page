@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/66428d5e1a.js" crossorigin="anonymous"></script>
+<body>
+    <div id="container">
+        <di v class="from-box">
+            <h1 id= "title">Sign Up</h1>
+            <from>
+                <div class="input-group">
+                    <div class="input-field" id="namefield">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" placeholder="Name">
+                </div>
+                <div class="input-field">
+                <i class="fa-solid fa-user"></i>
+                <input type="email" placeholder="email">
+            </div>
+            <div class="input-field">
+            <i class="fa-solid fa-user"></i>
+            <input type="password" placeholder="password">
+        </div>
+        <p> Lost password <a href="a">Click Here!</a></p>
+                </div>
+                <div class="btn-field">
+                    <button type="button" id="singupbtn">Sign UP</button>
+                    <button type="button" id="singinbtn" class="disable">Sign in</button>
+                </div>
+            </from>
+        </div>
+    </div>
+    
+    
+         
+ <script>
+    let singupbtn=document.getElementById("singupbtn");
+    let singinbtn=document.getElementById("singinbtn");
+    let namefield=document.getElementById("namefield");
+    let title=document.getElementById("title");
+ 
+    singinbtn.onclick=function(){
+        namefield.style.maxHeight="0" ;
+        title.innerHTML="sign in";
+        singupbtn.classList.add("disable");
+        singinbtn.classList.remove("disable")
+
+    }
+
+    singupbtn.onclick=function(){
+        namefield.style.maxHeight="60px" ;
+        title.innerHTML="sign up";
+        singupbtn.classList.remove("disable");
+        singinbtn.classList.add("disable")
+
+    }
+   
+ 
+
+ </script>
+</body>
+</html>
